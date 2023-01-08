@@ -36,7 +36,8 @@ Keybinding not set by default, use cogwheel to manually set it.
 ---
 Extension uses [Webview](https://code.visualstudio.com/api/extension-guides/webview) and is constantly updating viewer on a fixed interval. May cause performance issues. Testing needed!
 
-FIxed interval is by default set to 500ms.
+Fixed interval is by default set to 500ms.
 
 You can change that value by going in Settings - Extensions or by searching `@ext:undefined_publisher.houdinivexsublimehelp`
+
 ![HoudiniVEX_Vertical](./images/HoudiniVEX_Settings.jpg)
