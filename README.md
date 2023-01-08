@@ -20,6 +20,11 @@ Until it's officially uploaded on VSCode Marketplace, you can build it yourself 
 
 ![HoudiniVEX_vsix_installation](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_vsix_installation.jpg)
 
+## How-to
+---
+After installation, press `Shift + P` and search for `Houdini VEX Sublime Help`.
+Keybinding not set by default, use cogwheel to manually set it.
+
 ## Showcase
 ---
 ![HoudiniVEX_Horizontal](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Horizontal.jpg)
