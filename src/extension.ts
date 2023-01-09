@@ -32,7 +32,9 @@ export function activate(context: vscode.ExtensionContext) {
 		const panel = vscode.window.createWebviewPanel(
 		  'HoudiniVEXHelp', // Identifies the type of the webview. Used internally
 		  'Houdini VEX Help', // Title of the panel displayed to the user
-		  vscode.ViewColumn.One, // Editor column to show the new webview panel in.
+		  // put besides so it will always spawn right of the editor
+		  // using that info later to move it left, down or up, depending on position setting
+		  vscode.ViewColumn.Beside, // Editor column to show the new webview panel in.
 		  {} // Webview options. More on these later.
 		);
 		
@@ -40,10 +42,21 @@ export function activate(context: vscode.ExtensionContext) {
     	// And set its HTML content
     	panel.webview.html = getWebviewContent();
 		};
-		
+	
 		// Set initial content
 		updateWebview();
 
+		// decide where to spawn editor
+		// spawns on the right side of the editor by defaul (Beside)
+		if ( workbenchConfig.get("HoudiniVEXWebviewPosition") === "left"){
+			vscode.commands.executeCommand("workbench.action.moveActiveEditorGroupLeft");
+		}
+		if ( workbenchConfig.get("HoudiniVEXWebviewPosition") === "top"){
+			vscode.commands.executeCommand("workbench.action.moveActiveEditorGroupUp");
+		}
+		if ( workbenchConfig.get("HoudiniVEXWebviewPosition") === "bottom"){
+			vscode.commands.executeCommand("workbench.action.moveActiveEditorGroupDown");
+		}
 
 		// refresh only on editor change
 		vscode.window.onDidChangeTextEditorSelection(changeEvent => { updateWebview(); });
@@ -73,5 +86,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// return getCurrentTextSelection();
 		// let dateTime = new Date();
 		// return dateTime.toString();
+
+		
 
   }

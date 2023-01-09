@@ -2,6 +2,7 @@
 
 ## Changelog
 
+- 0.0.3 - Added Setting for default Help Webview spawn - no need to drag it to reveal text editor
 - 0.0.2 - Removed n millisecond refresh - now refreshes on editor change
 - 0.0.1 - Initial commit - uses n milliseconds to refresh Webview
 
@@ -37,6 +38,12 @@ Keybinding not set by default, use cogwheel to manually set it.
 
 ![HoudiniVEX_Vertical](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Vertical.jpg)
 
+## Settings
+
+Define default spawn position - set desired value in Settings. Search for `Houdini` 
+
+![HoudiniVEX_Position_Settings]((https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Position_Settings.jpg))
+
 ## **WARNING!** `Removed in v0.0.2`
 
 Extension uses [Webview](https://code.visualstudio.com/api/extension-guides/webview) and is constantly updating viewer on a fixed interval. May cause performance issues. Testing needed!
@@ -45,4 +52,4 @@ Fixed interval is by default set to 500ms.
 
 You can change that value by going in Settings - Extensions or by searching `@ext:undefined_publisher.houdinivexsublimehelp`
 
-![HoudiniVEX_Vertical](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Settings.jpg)
+![HoudiniVEX_Settings](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Settings.jpg)

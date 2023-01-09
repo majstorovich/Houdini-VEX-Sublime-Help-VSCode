@@ -2,7 +2,7 @@
   "name": "houdinivexsublimehelp",
   "displayName": "Houdini VEX Sublime Help",
   "description": "Houdini VEX Sublime Help",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -19,7 +19,25 @@
         "command": "houdinivexsublimehelp.HoudiniVEXWebviewHelp",
         "title": "Houdini VEX Sublime Help"
       }
-    ]    
+    ],
+    "configuration": [
+			{
+				"title": "Houdini VEX Webview Position",
+				"properties": {
+					"houdinivexsublimehelp.HoudiniVEXWebviewPosition": {
+						"type": "string",
+						"default": "right",
+            "enum" : ["right","left","top","bottom"],
+						"enumDescriptions": [
+              "Spawn Houdini VEX help on the right",
+              "Spawn Houdini VEX help on the left",
+              "Spawn Houdini VEX help on the top",
+              "Spawn Houdini VEX help on the bottom"
+            ]
+					}
+				}
+			}
+		]  
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
