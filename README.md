@@ -42,7 +42,7 @@ Keybinding not set by default, use cogwheel to manually set it.
 
 Define default spawn position - set desired value in Settings. Search for `Houdini` 
 
-![HoudiniVEX_Position_Settings]((https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Position_Settings.jpg))
+![HoudiniVEX_Position_Settings](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Position_Settings.jpg)
 
 ## **WARNING!** `Removed in v0.0.2`
 
