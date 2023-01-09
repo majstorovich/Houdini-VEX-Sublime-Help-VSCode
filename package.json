@@ -2,7 +2,7 @@
   "name": "houdinivexsublimehelp",
   "displayName": "Houdini VEX Sublime Help",
   "description": "Houdini VEX Sublime Help",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -19,19 +19,7 @@
         "command": "houdinivexsublimehelp.HoudiniVEXWebviewHelp",
         "title": "Houdini VEX Sublime Help"
       }
-    ],
-    "configuration": [
-			{
-				"title": "Houdini VEX Sublime Help",
-				"properties": {
-					"houdinivexsublimehelp.refreshRate": {
-						"type": "number",
-						"default": 500,
-						"description": "Houdini VEX Webview refresh/update rate. Unit in milliseconds.\n\n WARNING: Possible performance issues! \nNot sure if VSCode even refreshes faster than 60Hz. \n\n Maybe don\u2019t go below monitor refresh rate? Testing needed. \n\n 1000 \\ 60Hz = 16.666 \n 1000 \\ 75Hz = 13.333 \n 1000 \\ 120Hz = 8.333 \n 1000 \\ 144Hz = 6.944"
-					}
-				}
-			}
-		]
+    ]    
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

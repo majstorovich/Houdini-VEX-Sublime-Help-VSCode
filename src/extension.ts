@@ -5,7 +5,7 @@ import * as vscode from 'vscode';
 
 function getCurrentTextSelection(): string {
     var editor = vscode.window.activeTextEditor;
-    if (!editor) {
+	if (!editor) {
         return "";
     }
     var cursorPosition = editor.selection.start;
@@ -38,26 +38,15 @@ export function activate(context: vscode.ExtensionContext) {
 		
 		const updateWebview = () => {
     	// And set its HTML content
-		//let vex_key: string = getCurrentTextSelection();
     	panel.webview.html = getWebviewContent();
 		};
-
-		//panel.webview.visible = false;
 		
 		// Set initial content
 		updateWebview();
 
-		// And schedule updates to the content every n milliseconds, defined in settings
-		const interval = setInterval(updateWebview, workbenchConfig.get("refreshRate"));
 
-		panel.onDidDispose(
-			() => {
-			  // When the panel is closed, cancel any future updates to the webview content
-			  clearInterval(interval);
-			},
-			null,
-			context.subscriptions
-		  );
+		// refresh only on editor change
+		vscode.window.onDidChangeTextEditorSelection(changeEvent => { updateWebview(); });
 
 	  })
 	);
@@ -78,5 +67,11 @@ export function activate(context: vscode.ExtensionContext) {
 		{
 			return vex[vex_key];
 		}
+
+		// debugging
+
 		// return getCurrentTextSelection();
+		// let dateTime = new Date();
+		// return dateTime.toString();
+
   }
