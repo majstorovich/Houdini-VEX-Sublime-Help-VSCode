@@ -44,6 +44,24 @@ Define default spawn position - set desired value in Settings. Search for `Houdi
 
 ![HoudiniVEX_Position_Settings](https://raw.githubusercontent.com/majstorovich/Houdini-VEX-Sublime-Help-VSCode/main/images/HoudiniVEX_Position_Settings.jpg)
 
+## Restricted Mode
+
+If you think i'm a trustworthy person who won't do any harm to you OR if you've checked the code and didn't find anything suspicious, you can enable this Extension to work in the Restricted Mode.
+
+1. Go to Settings
+1. Search for `extensions.supportUntrustedWorkspaces`
+1. Edit in settings.json
+1. Add the missing code at the end of the file and save
+```json
+"extensions.supportUntrustedWorkspaces": {
+        "undefined_publisher.houdinivexsublimehelp": {
+            "supported": true,
+            "version": "0.0.3"
+        },
+    }
+```
+5. Profit!
+
 ## **WARNING!** `Removed in v0.0.2`
 
 Extension uses [Webview](https://code.visualstudio.com/api/extension-guides/webview) and is constantly updating viewer on a fixed interval. May cause performance issues. Testing needed!
